@@ -15,4 +15,8 @@ public class PointcutConfig {
 
     @Pointcut("bean(*Service*)")
     public void dataPackageConfigUsingBean(){}
+
+    @Pointcut("@annotation(com.aop.annotations.TrackTime)")
+    public void trackTimeAnnotation(){}
+
 }

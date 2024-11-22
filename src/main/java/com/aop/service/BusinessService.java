@@ -1,5 +1,6 @@
 package com.aop.service;
 
+import com.aop.annotations.TrackTime;
 import com.aop.repository.DataRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,6 +20,7 @@ public class BusinessService {
         this.dataRepository = dataRepository;
     }
 
+    @TrackTime
     public int calculateMax() {
         logger.info("called the calculateMax method");
         int[] dataList = dataRepository.retrieveData();

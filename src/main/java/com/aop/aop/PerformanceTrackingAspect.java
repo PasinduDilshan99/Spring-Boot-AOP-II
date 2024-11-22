@@ -13,7 +13,8 @@ public class PerformanceTrackingAspect {
 
     private Logger logger = LoggerFactory.getLogger(getClass());
 
-    @Around("execution(* com.aop.service.*.*(..))")
+//    @Around("execution(* com.aop.service.*.*(..))")
+    @Around("com.aop.config.PointcutConfig.trackTimeAnnotation()")
     public Object findExecutionTime(ProceedingJoinPoint joinPoint) throws Throwable {
 
         long startTime = System.currentTimeMillis();
