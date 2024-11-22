@@ -26,6 +26,7 @@ public class AopApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+        logger.info("called the run method");
         logger.info("max value is : {} ", businessService.calculateMax());
     }
 }
